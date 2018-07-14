@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 body {
     width: "100%";
     text-align: center;
@@ -45,9 +44,36 @@ img.one {
 }
 
 iframe {
-    display: block;       /* iframes are inline by default */
+    display: block;
+    /* iframes are inline by default */
     background: #000;
-    border: none;         /* Reset default border */
-    height: 89.45vh;        /* Viewport-relative units */
+    border: none;
+    /* Reset default border */
+    height: 89.45vh;
+    /* Viewport-relative units */
     width: 100vw;
+}
+
+#countdown {
+    margin-top: 5px;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: orange;
+    color: #FFF;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+}
+
+a.button:hover {
+    background-color: orange;
+}
+
+a.button.large {
+    font-size: 1.3em;
+    padding: 1em;
+    margin: 1em;
 }
