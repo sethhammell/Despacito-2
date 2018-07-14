@@ -1,7 +1,7 @@
 .center {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
+    border: 10px solid green;
     padding: 10px;
 }
 
@@ -11,7 +11,12 @@
 body {
     width: "100%";
     margin: auto;
+    text-align: center;
     background: #2E4053;
+}
+
+#countdown {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 ul.navbar {

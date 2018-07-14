@@ -16,18 +16,18 @@
 
     <ul class="navbar">
         <li>
-            <a href="watch.html" class="navbar">View Despacito 1</a>
+            <a href="index.html" class="navbar">How Long Until Despacito 2</a>
         </li>
         <li>
-            <a href="countdown.html" class="navbar">How Long Until Despacito 2</a>
+            <a href="watch.html" class="navbar">Watch the Original</a>
         </li>
         <li>
-            <a href="about.html" class="navbar">About Us</a>
+            <a href="about.html" class="navbar">About</a>
         </li>
     </ul>
     <!-- Display the countdown timer in an element -->
     <div class="center">
-        <p id="countdown" style="font-size: 5em; font-family: Verdana"></p>
+        <p id="countdown" style="font-size: 5em"></p>
     </div>
 
     <script>
@@ -51,28 +51,28 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the element with id="demo"
             var output = "";
 
             if (years > 0) {
-                output = output + years + " years<br>"
+                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+                    " minutes<br>" + seconds + " seconds<br>";
             }
             if (days > 0) {
-                output = output + days + " days<br>"
+                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+                    " minutes<br>" + seconds + " seconds<br>";
             }
             if (hours > 0) {
-                output = output + hours + " hours<br>"
+                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+                    " minutes<br>" + seconds + " seconds<br>";
             }
             if (minutes > 0) {
-                output = output + minutes + " minutes<br>"
+                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+                    " minutes<br>" + seconds + " seconds<br>";
             }
             if (seconds > 0) {
-                output = output + seconds + " seconds<br>"
+                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+                    " minutes<br>" + seconds + " seconds<br>";
             }
-
-
-            //   document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            //   + minutes + "m " + seconds + "s ";
 
             document.getElementById("countdown").innerHTML = output;
 
