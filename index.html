@@ -25,26 +25,25 @@
             <a href="Aboutus.html" class="navbar">About</a>
         </li>
     </ul>
-    <!-- Display the countdown timer in an element -->
+
     <div>
-        <p id="countdown" style="font-size: 4.8em"></p>
+        <p id="countdown" style="font-size: 3.5em"></p>
     </div>
 
     <script>
-        // Set the date we're counting down to
-        var time = Math.random() * 200000000000 + 1531587033571;
+        var current = new Date().getTime();
+        var time = Math.random() * 5 * (365 * 24 * 60 * 60 * 1000) + current + (3 * 24 * 60 * 60 * 1000);
         var countDownDate = new Date(time).getTime();
 
-        // Update the count down every 1 second
         var x = setInterval(function () {
 
-            // Get todays date and time
+
             var now = new Date().getTime();
 
-            // Find the distance between now an the count down date
+
             var distance = countDownDate - now;
 
-            // Time calculations for days, hours, minutes and seconds
+
             var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
             var days = Math.floor(distance % (1000 * 60 * 60 * 24 * 365) / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -56,30 +55,25 @@
             if (years > 0) {
                 output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
                     " minutes<br>" + seconds + " seconds<br>";
-            }
-            if (days > 0) {
-                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+            } else if (days > 0) {
+                output = days + " days<br>" + hours + " hours<br>" + minutes +
                     " minutes<br>" + seconds + " seconds<br>";
-            }
-            if (hours > 0) {
-                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+            } else if (hours > 0) {
+                output = hours + " hours<br>" + minutes +
                     " minutes<br>" + seconds + " seconds<br>";
-            }
-            if (minutes > 0) {
-                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
+            } else if (minutes > 0) {
+                output = minutes +
                     " minutes<br>" + seconds + " seconds<br>";
-            }
-            if (seconds > 0) {
-                output = years + " years<br>" + days + " days<br>" + hours + " hours<br>" + minutes +
-                    " minutes<br>" + seconds + " seconds<br>";
+            } else if (seconds > 0) {
+                output = seconds + " seconds<br>";
             }
 
             document.getElementById("countdown").innerHTML = output;
 
-            // If the count down is finished, write some text
+
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
+                document.getElementById("countdown").innerHTML = "Despacito 2 has been cancelled";
             }
         }, 1000);
     </script>
