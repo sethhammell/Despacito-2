@@ -37,6 +37,7 @@
             <option value="1800000">League of Legends Game</option>
             <option value="7200000">Sushi Buffet</option>
             <option value="227000">Watch the original Despacito</option>
+            <option value="93600000">Attend Hack the North</option>
         </select>
         <button onclick="calculate()" type="button">Calculate</button>
     </form>
@@ -47,6 +48,7 @@
 
 
     <script>
+    	//deep learning starts here (for those interested)
         function calculate() {
             var now = new Date().getTime();
             var distance = countDownDate - now;
@@ -65,9 +67,7 @@
 
             document.getElementById("time").innerHTML = "You could do that " + time + " time(s)";
 
-
         }
-
 
         var current = new Date().getTime();
         var time = Math.random() * 5 * (365 * 24 * 60 * 60 * 1000) + current + (3 * 24 * 60 * 60 * 1000);
